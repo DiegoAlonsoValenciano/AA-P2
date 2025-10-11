@@ -10,17 +10,11 @@ import numpy as np
 
 def test_gradient(x_train, y_train):
     print("------------test_gradient-----------")
-    print("---Original---")
-    compute_gradient_test(compute_gradient_matrix)
-    print("---POO---")
     compute_gradient_test(compute_gradient_multi_obj)
 
 
 def test_cost(x_train, y_train):
      print("------------test_cost-----------")
-     print("---Original---")
-     compute_cost_test(compute_cost_matrix)
-     print("---POO---")
      compute_cost_test(cost_test_multi_obj)
 
 

@@ -31,7 +31,7 @@ class LogisticRegMulti(LinearRegMulti):
         su = p1+p2
         su = su.sum()
 
-        dev = (-1/np.size(yp)) * dev
+        dev = (-1/np.size(yp)) * su
         return dev
 
     
