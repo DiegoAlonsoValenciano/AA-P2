@@ -19,10 +19,20 @@ class LogisticRegMulti(LinearRegMulti):
     def __init__(self, x, y,w,b, lambda_):
         super().__init__(x, y,w,b,lambda_)
 
-
-
+    def f_w_b(self, x):
+        el = super().f_w_b(x)
+        return (1/(1+np.exp(-el)))
     
-    
+    def compute_cost(self):
+        yp = self.f_w_b(self.x)
+        p1 = self.y @ np.log10(yp)
+        p2 = (1 - (self.y @ np.log10((1-yp))))
+
+        su = p1+p2
+        su = su.sum()
+
+        dev = (-1/np.size(yp)) * dev
+        return dev
 
     
 def cost_test_multi_obj(x,y,w_init,b_init):
