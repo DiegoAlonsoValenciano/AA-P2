@@ -25,8 +25,8 @@ class LogisticRegMulti(LinearRegMulti):
     
     def compute_cost(self):
         yp = self.f_w_b(self.x)
-        p1 = self.y @ np.log10(yp)
-        p2 = (1 - (self.y @ np.log10((1-yp))))
+        p1 = self.y * np.log(yp)
+        p2 = (1 - self.y) * (np.log((1-yp)))
 
         su = p1+p2
         su = su.sum()

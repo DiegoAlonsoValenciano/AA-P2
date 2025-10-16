@@ -54,12 +54,6 @@ def load_data_csv_multi(path,x1_colum,x2_colum,x3_colum,y_colum):
     y = data[y_colum].to_numpy()
     return X, y
 
-def pasar_0_1(param):
-    if(param<7):
-        param = 0
-    else:
-        param = 1
-    return param
 
 ## 0 Malo, 1 Regular, 2 Notable, 3 Sobresaliente, 4 Must Play.
 ## 0 Malo, 1 Bueno
